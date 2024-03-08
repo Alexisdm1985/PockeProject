@@ -1,0 +1,67 @@
+
+.poke-card {
+    background: radial-gradient(circle, var(--primary-gradient) 2%,  var(--secondary-gradient-card) 100%);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 24px;
+    text-transform: capitalize;
+    padding: 2rem 1.4rem;
+    cursor: pointer;
+    animation: show 3s;
+    transition: flex-grow 3s;
+}
+.poke-card-body {
+    text-align: center;
+}
+
+.poke-numeracion {
+    display: inline-block;
+    margin-bottom: 1rem !important;
+}
+.type-container {
+    display: flex;
+    justify-content: center;
+}
+
+.type-poke {
+    background-color: var(--type-pokemon-bg);
+    padding: .5rem .8rem;
+    border-radius: 5px;
+    color: black;
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* shadows */
+.poke-card {
+    box-shadow: 5px 2px 15px var(--box-shadow);
+}
+.poke-card:hover {
+    box-shadow: 5px 5px 15px var(--box-shadow-hover);
+    transition: scale 400ms linear;
+    scale: 1.02;
+}
+.poke-card img{
+    transition: scale 250ms linear;
+}
+
+.poke-card:hover img {
+    filter: drop-shadow(5px 8px 15px rgba(0, 0, 0, .7));
+    transition: filter .8s linear;
+    transition: scale 400ms linear;
+    scale: 1.07;
+}

@@ -1,0 +1,98 @@
+:root {
+    --primary-gradient: rgba(57,148,148,1);
+    --secondary-gradient: rgba(24,74,74,1);
+    --secondary-gradient-card: rgba(24,74,74,.1);
+    --type-pokemon-bg: #62D5B4;
+    --box-shadow: #397070;
+    --box-shadow-hover: #1C3939;
+    --charmander-color: #CD5241;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #e9dcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, var(--primary-gradient) 2%, var(--secondary-gradient) 100%);
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70vw;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: start; */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    height: 90%;
+}
+
+
+#headerImg {
+    background-image: url("./../public/imgs/pokeimg2.png");
+    width: 400px;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#headerImg ~ div {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 449px) {
+
+    .container {
+        width: 100%;
+    }
+    
+    main {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .poke-card {
+        flex-direction: row;
+        border-radius: 25px;
+        gap: 1rem;
+        min-width: 300px;
+        font-size: 5vw;
+    }
+    .poke-card img {
+        min-width: 100px;
+        flex-shrink: 1;
+    }
+
+    .poke-numeracion {
+        width: 3rem;
+        margin: 0;
+    }
+
+}
